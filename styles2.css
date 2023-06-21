@@ -29,6 +29,7 @@ html {
 }
 
 * {
+  text-wrap: balance;
   transition-duration: 0.1s;
   padding: 0;
   margin: 0;
