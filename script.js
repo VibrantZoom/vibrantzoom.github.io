@@ -196,13 +196,13 @@ function onLoadIndex(){
 
 
 function onLoadCompoundList(){
-// if(localStorage.getItem("donetutorial")){
-//   var mouseanimation = document.getElementById("click-tutorialtitle");
-//   mouseanimation.style.display = "none";  
-//   var mouseanimation = document.getElementById("click-tutorialscroll");
-//   mouseanimation.style.display = "none";
+if(localStorage.getItem("donetutorial")){
+  var mouseanimation = document.getElementById("click-tutorialtitle");
+  mouseanimation.style.display = "none";  
+  var mouseanimation = document.getElementById("click-tutorialscroll");
+  mouseanimation.style.display = "none";
   
-// }
+}
 
 }
 
@@ -236,7 +236,7 @@ var mouseanimation = document.getElementById("click-tutorialscroll");
 mouseanimation.style.display = "none";
 
   window.scroll({
-    top: 2000,
+    top: 1500,
     behavior: "smooth",
   });}
   let clicks = 0;
@@ -297,6 +297,92 @@ var mouseani = document.getElementsByClassName("aceticacid-description");
   }
 
 }
+
+
+async function nitricacidclick(){
+var desc = document.getElementsByClassName("nitricacid-description");
+  // computedStyle.display== "inline-block" 
+  if(shown == true) {
+    for(let i = 0; i<desc.length; i++){
+    console.log(1123);
+    desc[i].style.display = "inline";
+      desc[i].animate([
+        // key frames
+        // { transform: "translateY(100px)"},
+        // { transform: "translateY(0px)" }
+        { opacity: "100%"},
+        { opacity: "0%" }
+      ], {
+        // sync options
+        duration: 200,
+        iterations: 1
+
+      });   
+      // Figure out way to make all go at once
+      // await new Promise(resolve => setTimeout(resolve,190));
+
+
+      desc[i].style.display = "none";
+      shown = false;
+    }
+  }else{
+    for(let i = 0; i<desc.length; i++){
+
+    console.log(1123123);
+    desc[i].style.display = "inline";
+    shown = true;
+    }
+  }
+
+}
+async function phosphoricacidclick(){
+  var desc = document.getElementsByClassName("phosphoricacid-description");
+    // computedStyle.display== "inline-block" 
+    if(shown == true) {
+      for(let i = 0; i<desc.length; i++){
+      console.log(1123);
+      desc[i].style.display = "inline";
+        desc[i].animate([
+          // key frames
+          // { transform: "translateY(100px)"},
+          // { transform: "translateY(0px)" }
+          { opacity: "100%"},
+          { opacity: "0%" }
+        ], {
+          // sync options
+          duration: 200,
+          iterations: 1
+  
+        });   
+        // Figure out way to make all go at once
+        // await new Promise(resolve => setTimeout(resolve,190));
+  
+  
+        desc[i].style.display = "none";
+        shown = false;
+      }
+    }else{
+      for(let i = 0; i<desc.length; i++){
+  
+      console.log(1123123);
+      desc[i].style.display = "inline";
+      shown = true;
+      }
+    }
+  
+  }
+  function seeTutorialAgain(){
+    if(cookiesEnabled){
+     localStorage.removeItem("donetutorial");
+    }
+    window.scroll({
+      top: 0
+    })
+    location.reload();
+    return false;
+
+  }
+
 
 function learnmore(){  
   let rand = getRandomInt(3);

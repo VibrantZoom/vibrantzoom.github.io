@@ -268,8 +268,7 @@ button:hover {
 
 .invisiblebutton {
   transition: transform 0.1s ease-in-out;
-  background-color: rgba(0, 0, 0, 0);
-}
+  background-color: rgba(0, 0, 0, 0);}
 .invisiblebutton:hover {
   transform: scale(1.02);
 }
@@ -341,8 +340,12 @@ margin-top: 300px;
 .scrolll p {
   font-size: 1.5rem;
 }
-.aceticacid-description {
+
+.compound-description {
   display: none;
+}
+.compounddescriptionwrapper{
+  margin-bottom: 300px;
 }
 .invertcolors {
     -webkit-filter: invert(1);
