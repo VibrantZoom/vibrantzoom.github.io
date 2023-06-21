@@ -46,7 +46,38 @@
         <p id="naviconlabel" class="navicon naviconlabel">FAQ</p>
       </div>
       </a>
+      <!-- <a class="naviconlink" title="FAQ" href="FAQ.html"> -->
+
         <div class="themedropdown">
+        <div class="naviconwrapper themedropdownwrapper">
+            <i id="change-theme-main-button" class="fa-solid fa-paintbrush fa-2xl navicon change-theme-button" style="color: #ffffff;"></i>
+
+        <p id="naviconlabel" class="navicon naviconlabel changethemelabel">Change Theme</p>
+        <div class="dropdownbuttonswrapper">
+            <button
+              onclick="orangeTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Orange</p>
+            </button>
+            <button
+              onclick="redTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Red</p>
+            </button>
+            <button
+              onclick="blackTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Black</p>
+            </button>
+          </div>
+    </div>
+      </div>
+      <!-- </a> -->
+
+        <!-- <div class="themedropdown">
           <p id="change-theme-main-button" class="change-theme-button navicon">
             Change Theme
           </p>
@@ -70,7 +101,7 @@
               <p>Black</p>
             </button>
           </div>
-        </div>
+        </div> -->
       </nav>
       <div id="disclaimerBanner" class="banner"><p>Disclaimer banner: This site uses cookies. If you disable them, your themes will not be saved!</p> <button id="enableCookiesButton" onclick="enableCookies()">Accept</button> <button onclick="disableCookies()">Deny</button> </div>
       <main>
