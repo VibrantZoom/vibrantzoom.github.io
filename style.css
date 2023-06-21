@@ -106,20 +106,34 @@ nav {
 .themedropdown:hover #change-theme-main-button {
   transform: translateY(-30px);
 }
+.themedropdown:hover #change-theme-main-button {
+  transform: translateY(-30px);
+}
 .change-theme-button {
-  margin: 0 10px;
-  padding: 10px 25px;
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
   border-radius: 5px;
   cursor: pointer;
 }
+.themedropdown:hover .changethemelabel{
+  color: transparent !important;
+}
+.themedropdownwrapper{
+  display: flex;
+align-items: center;
+  justify-content: center;
+}
 .dropdownbuttonswrapper {
   margin-top: 30px;
+  margin-right: auto;
   position: absolute;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-
+.dropdownbuttonswrapper button{
+  margin: 0px 10px;
+  padding: 10px 25px;
+}
 .themedropdown {
   margin-top: auto;
   margin-bottom: auto;
