@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css-reset.css">
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans:wght@600&display=swap" rel="stylesheet">    
@@ -15,17 +15,54 @@
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="index.html"><i class="fa-solid fa-house fa-2xl navicon" style="color: #ffffff;"></i></a>
+        <nav id="nav">
+            <a class="naviconlink" title="Home" href="index.html">
+    
+            <div class="naviconwrapper">
+              <i
+                class="fa-solid fa-house fa-2xl navicon"
+                style="color: #ffffff"
+              ></i>
+            <p id="naviconlabel" class="navicon naviconlabel">Home</p>
+          </div>
+          </a>
+    
+          <a class="naviconlink" title="FAQ" href="FAQ.html">
+    
+            <div class="naviconwrapper">
+              <i
+                class="fa-solid fa-question fa-2xl navicon"
+                style="color: #ffffff"
+              ></i>
+            <p id="naviconlabel" class="navicon naviconlabel">FAQ</p>
+          </div>
+          </a>
             <div class="themedropdown">
-                <p id="change-theme-main-button" class="change-theme-button navicon">Change Theme</p>
-                <div class="dropdownbuttonswrapper">
-                    <button onclick="orangeTheme()" class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"><p>Orange</p></button>
-                    <button onclick="redTheme()" class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"><p>Red</p></button>
-                    <button onclick="blackTheme()" class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"><p>Black</p></button>
-                </div>
+              <p id="change-theme-main-button" class="change-theme-button navicon">
+                Change Theme
+              </p>
+              <div class="dropdownbuttonswrapper">
+                <button
+                  onclick="orangeTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Orange</p>
+                </button>
+                <button
+                  onclick="redTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Red</p>
+                </button>
+                <button
+                  onclick="blackTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Black</p>
+                </button>
+              </div>
             </div>
-        </nav>
+          </nav>
 <main>
 
 
@@ -33,40 +70,64 @@
         <div class="hero">
             <h1 class="hiddenL">Caution: Hydroxic Acid</h1>
             <h2 class="yellow hiddenL">Beware</h2>
-            <a title="Source" href="https://pixabay.com/photos/drop-of-water-drop-impact-ripples-578897/">
+ 
                 <img class="hiddenR" style="height:250px; float: right; border-radius: 10px;" src="https://cdn.pixabay.com/photo/2014/12/24/05/02/drop-of-water-578897_1280.jpg" alt="Hydroxic Acid Picture">
-                </a>
                 
                     <p class="subtitle hiddenL">Picture of hydroxic acid, also known as dihydrogen monoxide.</p>
         </div>    
     
     <h2 class="hiddenL">What is Hydroxic Acid?</h2>
-    <p class="hydroxicaciddesc hiddenL description">Hydroxic acid, with its chemical formula H2O, is a pervasive and potentially deadly compound. Its extensive presence in our environment makes it impossible to escape from. It's known for its corrosive properties, capable of wearing down even the strongest of metals over time. It is also a known conductor of electricity, which can lead to lethal outcomes if improperly handled. Inhalation of this substance in its gaseous form can result in severe internal damage and is often fatal. Moreover, in its solid form, it is hard and slick, causing numerous accidents annually. And yet, despite all these menacing characteristics, hydroxic acid is essential for all known forms of life. This substance, which sounds so dangerous, is simply water.</p>
-    <button class="revealbuttons1 button1 hiddenR" onclick="revealImages()"><p>See pictures of hydroxic acid </p></button>
-    
+    <img style="float: right; margin-left: 100px;" height="300px" src="https://images.unsplash.com/photo-1488642945284-f5b65425f15a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1051&q=80" alt="Hydroxic Acid Picture">
+    <p class="hydroxicaciddesc hiddenL description">Hydroxic acid, with its chemical formula H2O, is a pervasive and potentially deadly compound. Its extensive presence in our environment makes it impossible to escape from. It's known for its corrosive properties, capable of wearing down even the strongest of metals over time. It is also a known conductor of electricity, which can lead to lethal outcomes if improperly handled. Inhalation of this substance in its gaseous form can result in severe internal damage and is often fatal. Moreover, in its solid form, it is hard and slick, causing numerous accidents annually. And yet, despite all these menacing characteristics, hydroxic acid is essential for all known forms of life. This substance is just water. Wondering about what this substance is? Read carefully!</p>
+
+    <p class="hiddenL">Here are some fun facts about hydroxic acid:</p>
+    <ul class="hiddenL">
+        <li>100% of those who consume hydroxic acid die</li>
+        <li>Hydroxic acid has the ability to corrode many metals</li>
+        <li>Hydroxic acid is found in biopsies of pre-cancerous tumors and lesions.</li>
+      </ul> 
+    <button class="button1 learnmore hiddenL" onclick="learnmore()">Learn more about hydroxic acid, also known as dihydrogen monoxide</button>
+    <button class="revealbuttons1 button1 hiddenR" onclick="revealImages()">Visit other pages</button>
+
 <section  class="revealedbuttons hiddenL">
         <!-- <button class="revealbuttons1 button1 imagebutton" onclick="window.location='https://images.unsplash.com/photo-1555412654-72a95a495858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80';">See image 1</button> -->
-        <button onclick="document.location='https://images.unsplash.com/photo-1562016600-ece13e8ba570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=738&q=80';" class="revealbuttons2 imagebutton button1">See image 1</button>
+        <a class="revealbuttons2 imagebutton button1 abuttons" href="index.html">Home</a>
+        <a class="revealbuttons2 imagebutton button1 abuttons" href="CompoundList.html">Chemical Compounds List</a>
+
+      
+
+        <!-- OBSOLETE -->
+        <!-- <button onclick="document.location='https://images.unsplash.com/photo-1562016600-ece13e8ba570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=738&q=80';" 
+        class="revealbuttons2 imagebutton button1">Home</button> -->
     
-        <button onclick="document.location='https://images.unsplash.com/photo-1527066236128-2ff79f7b9705?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80';" class="revealbuttons2 imagebutton button1">See image 2</button>
-        <button onclick="document.location='https://images.unsplash.com/photo-1519873174361-37788c5a73c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=641&q=80';" class="revealbuttons2 imagebutton button1">See image 3</button>
+        <!-- <button onclick="document.location='https://images.unsplash.com/photo-1527066236128-2ff79f7b9705?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80';" class="revealbuttons2 imagebutton button1">Chemical Compounds List</button> -->
+        <!-- <button onclick="document.location='https://images.unsplash.com/photo-1519873174361-37788c5a73c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=641&q=80';" class="revealbuttons2 imagebutton button1">See image 3</button> -->
     </section>
-    <button class="button1 learnmore hiddenL" onclick="learnmore()">Learn more about hydroxic acid, also known as dihydrogen monoxide</button>
-    
-    <!-- <button class="button1" onclick="window.location='index.html';">Go back</button> -->
-    
+        
     
 </main>  
        
 <footer>
     <h3 id="footertitle">What's Next?</h3>
     <div class="options">
-        <a title="Home" href="index.html"><i class="fa-solid fa-house fa-2xl footicon" style="color: #ffffff; margin-bottom: 50px;"></i></a>
-<a title="Compound List" href="CompoundList.html"><i class="fa-solid fa-list fa-2xl footicon" style="color: #ffffff;"></i></a>
-<!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
+      <a title="Home" href="index.html"
+        ><i
+          class="fa-solid fa-house fa-2xl footicon"
+          style="color: #ffffff; margin-bottom: 50px"
+        ></i
+      ></a>
+      <a title="FAQ" href="FAQ.html">
+<i class="fa-solid fa-question fa-2xl footicon" style="color: #ffffff"></i>
+      </a>
+      <a title="Compound List" href="CompoundList.html"
+        ><i
+          class="fa-solid fa-list fa-2xl footicon"
+          style="color: #ffffff"
+        ></i
+      ></a>
+      <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
     </div>
-
-</footer>
+  </footer>
     </div>
     </div>
    

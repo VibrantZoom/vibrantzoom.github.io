@@ -1,12 +1,36 @@
 let viewcount = 0;
-
-if(localStorage.getItem("theme") == "black"){
-blackTheme();
-}else if(localStorage.getItem("theme") == "orange"){
-orangeTheme();
-}else if(localStorage.getItem("theme") == "red"){
-redTheme();
+let cookiesEnabled = true;
+function enableCookies(){
+  document.getElementById("disclaimerBanner").style.display = "none";
+  cookiesEnabled = true;
+  localStorage.setItem("cookiesEnabled", true);
+  document.getElementById("nav").style.borderRadius = '10px';
+  // more customization
+//   navElement.style.borderTopLeftRadius = '10px';
+// navElement.style.borderTopRightRadius = '0';
+// navElement.style.borderBottomLeftRadius = '0';
+// navElement.style.borderBottomRightRadius = '10px';
 }
+function disableCookies(){
+  document.getElementById("disclaimerBanner").style.display = "none";
+  document.getElementById("nav").style.borderRadius = '10px';
+
+  cookiesEnabled = false;
+}
+
+
+
+
+if(cookiesEnabled) {
+  if(localStorage.getItem("theme") == "black"){
+    blackTheme();
+    }else if(localStorage.getItem("theme") == "orange"){
+    orangeTheme();
+    }else if(localStorage.getItem("theme") == "red"){
+    redTheme();
+    }
+}
+
 
 
 const observerR = new IntersectionObserver((entries) => {
@@ -65,7 +89,9 @@ for(let i = 0; i < hovertarget.length; i++){
   // var rs = getComputedStyle(r);
 function orangeTheme(){
   // https://realtimecolors.com/?colors=0a060e-ff8000-76aa46-d7c5e7-446228
-  localStorage.setItem("theme", "orange");
+  if(cookiesEnabled){
+    localStorage.setItem("theme", "orange");
+  }
 var r = document.querySelector(':root');
 var variableUpdates = {
   '--background-color': '#ff8000',
@@ -84,17 +110,21 @@ for (var variable in variableUpdates) {
 // Set body background color to the updated background color variable
 }
 function redTheme(){
+  if(cookiesEnabled){
   localStorage.setItem("theme", "red");
+  }
   // https://realtimecolors.com/?colors=030302-ff5e5e-96bba7-e1d8d1-745d8e
 var r = document.querySelector(':root');
 var variableUpdates = {
   '--background-color': '#ff5e5e',
   '--text-color': '#030302',
   '--primary-button-color': '#96bba7',
-  '--secondary-button-color': '#e1d8d1',
+  '--secondary-button-color': '#122d46',
   '--accent-color': '#745d8e',
   '--subtitle-color': 'darkgrey',
-  '--nav-color': 'lightcoral'
+  '--nav-color': 'lightcoral',
+  '--link-active': '#02f9c0',
+  '--link-visited': 'aqua'
 };
 // Update the variables using a loop
 for (var variable in variableUpdates) {
@@ -107,7 +137,9 @@ for (var variable in variableUpdates) {
 
 function blackTheme(){
 //https://realtimecolors.com/?colors=f7fafd-04080c-1b3a55-0c1a27-152d41
+if(cookiesEnabled){
   localStorage.setItem("theme", "black");
+}
   var r = document.querySelector(':root');
 
   var variableUpdates = {
@@ -122,12 +154,10 @@ function blackTheme(){
   }
 
 
-  // Update the variables using a loop
   for (var variable in variableUpdates) {
     r.style.setProperty(variable, variableUpdates[variable]);
   }
   
-  // Set body background color to the updated background color variable
 }
 
 
@@ -166,13 +196,13 @@ function onLoadIndex(){
 
 
 function onLoadCompoundList(){
-if(localStorage.getItem("donetutorial")){
-  var mouseanimation = document.getElementById("click-tutorialtitle");
-  mouseanimation.style.display = "none";  
-  var mouseanimation = document.getElementById("click-tutorialscroll");
-  mouseanimation.style.display = "none";
+// if(localStorage.getItem("donetutorial")){
+//   var mouseanimation = document.getElementById("click-tutorialtitle");
+//   mouseanimation.style.display = "none";  
+//   var mouseanimation = document.getElementById("click-tutorialscroll");
+//   mouseanimation.style.display = "none";
   
-}
+// }
 
 }
 
@@ -210,7 +240,7 @@ mouseanimation.style.display = "none";
     behavior: "smooth",
   });}
   let clicks = 0;
-  // optimize using strings l8tr
+  // optimize using strings l8tr (TODO)
 
   var shown = false;
 
@@ -224,16 +254,20 @@ async function aceticacidclick(){
   mouseanimation.classList.add("fa-bounce");
   mouseanimation.classList.remove("fa-beat-fade");
 }else if(clicks >= 2){
+  if(cookiesEnabled){
   localStorage.setItem("donetutorial", true);
+  }
   var mouseanimation = document.getElementById("click-tutorialtitle");
   mouseanimation.style.display = "none";  
 }
 var mouseani = document.getElementsByClassName("aceticacid-description");
-for(let i = 0; i<mouseani.length; i++){
-  let computedStyle = window.getComputedStyle(mouseani[i]);
+
+  let computedStyle = window.getComputedStyle(mouseani[0]);
   // computedStyle.display== "inline-block" 
   if(shown == true) {
-    mouseani[i].style.display = "inline-block";
+    for(let i = 0; i<mouseani.length; i++){
+    console.log(1123);
+    mouseani[i].style.display = "inline";
       mouseani[i].animate([
         // key frames
         // { transform: "translateY(100px)"},
@@ -246,16 +280,22 @@ for(let i = 0; i<mouseani.length; i++){
         iterations: 1
 
       });   
-      await new Promise(resolve => setTimeout(resolve,190));
+      // Figure out way to make all go at once
+      // await new Promise(resolve => setTimeout(resolve,190));
 
 
       mouseani[i].style.display = "none";
       shown = false;
+    }
   }else{
-    mouseani[i].style.display = "inline-block";
+    for(let i = 0; i<mouseani.length; i++){
+
+    console.log(1123123);
+    mouseani[i].style.display = "inline";
     shown = true;
+    }
   }
-}
+
 }
 
 function learnmore(){  

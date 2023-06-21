@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Some Chemical Compounds</title>
     <link rel="stylesheet" href="css-reset.css" />
-    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="favicon/favicon.ico" />
@@ -23,13 +23,28 @@
 
   <body onload="onLoadCompoundList()">
     <div class="container">
-      <nav>
-        <a href="index.html"
-          ><i
+      <nav id="nav">
+        <a class="naviconlink" title="Home" href="index.html">
+
+        <div class="naviconwrapper">
+          <i
             class="fa-solid fa-house fa-2xl navicon"
             style="color: #ffffff"
-          ></i
-        ></a>
+          ></i>
+        <p id="naviconlabel" class="navicon naviconlabel">Home</p>
+      </div>
+      </a>
+
+      <a class="naviconlink" title="FAQ" href="FAQ.html">
+
+        <div class="naviconwrapper">
+          <i
+            class="fa-solid fa-question fa-2xl navicon"
+            style="color: #ffffff"
+          ></i>
+        <p id="naviconlabel" class="navicon naviconlabel">FAQ</p>
+      </div>
+      </a>
         <div class="themedropdown">
           <p id="change-theme-main-button" class="change-theme-button navicon">
             Change Theme
@@ -65,14 +80,14 @@
           title="Chemical Compound"
           src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
         "
-          alt="Chemicals"
+          alt="Picture of Chemicals"
         />
         <button onclick="scrollll()" class="scrolll mainbutton hiddenR">
           <p>See chemical compounds</p>
           <i
             class="fa-solid fa-hand-pointer fa-beat-fade fa-2xl"
             id="click-tutorialscroll"
-            style="color: #ffffff; position: absolute; display: inline"
+            style="color: #ffffff; position: absolute; display: inline; z-index: 3;"
           ></i>
         </button>
       </div>
@@ -87,6 +102,8 @@
           ></i>
         </button>
         <div class="compounddescription">
+          <img class="invertcolors aceticacid-description" style="float: right; margin-top: -50px;"  height="300px" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Acetic-acid-2D-skeletal.svg" alt="Picture of Chemical Formula Of Acetic Acid">
+
           <p class="aceticacid-description hiddenL description">
             Acetic acid is a clear, colorless liquid that has a pungent,
             vinegar-like odor. It is an organic acid and is commonly used in a
@@ -106,27 +123,50 @@
             products we use every day. Its versatility and importance in various
             industries make it a key player in the chemical industry.
           </p>
+
         </div>
+
+        <button style="margin-top: 10vh;" class="revealbuttons1 button1 hiddenR" onclick="revealImages()">Visit other pages</button>
+
+        <section  class="revealedbuttons hiddenL">
+                <!-- <button class="revealbuttons1 button1 imagebutton" onclick="window.location='https://images.unsplash.com/photo-1555412654-72a95a495858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80';">See image 1</button> -->
+                <a class="revealbuttons2 imagebutton button1 abuttons" href="index.html">Home</a>
+                <a class="revealbuttons2 imagebutton button1 abuttons" href="Hydroxic Acid.html">Hydroxic Acid</a>
+        
+              
+        
+                <!-- OBSOLETE -->
+                <!-- <button onclick="document.location='https://images.unsplash.com/photo-1562016600-ece13e8ba570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=738&q=80';" 
+                class="revealbuttons2 imagebutton button1">Home</button> -->
+            
+                <!-- <button onclick="document.location='https://images.unsplash.com/photo-1527066236128-2ff79f7b9705?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80';" class="revealbuttons2 imagebutton button1">Chemical Compounds List</button> -->
+                <!-- <button onclick="document.location='https://images.unsplash.com/photo-1519873174361-37788c5a73c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=641&q=80';" class="revealbuttons2 imagebutton button1">See image 3</button> -->
+            </section>
+            
+            <footer>
+              <h3 id="footertitle">What's Next?</h3>
+              <div class="options">
+                <a title="Home" href="index.html"
+                  ><i
+                    class="fa-solid fa-house fa-2xl footicon"
+                    style="color: #ffffff; margin-bottom: 50px"
+                  ></i
+                ></a>
+                <a title="FAQ" href="FAQ.html">
+      <i class="fa-solid fa-question fa-2xl footicon" style="color: #ffffff"></i>
+                </a>
+                <a title="Compound List" href="CompoundList.html"
+                  ><i
+                    class="fa-solid fa-list fa-2xl footicon"
+                    style="color: #ffffff"
+                  ></i
+                ></a>
+                <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
+              </div>
+            </footer>
       </main>
     </div>
-    <footer>
-      <h3 id="footertitle">What's Next?</h3>
-      <div class="options">
-        <a title="Home" href="index.html"
-          ><i
-            class="fa-solid fa-house fa-2xl footicon"
-            style="color: #ffffff; margin-bottom: 50px"
-          ></i
-        ></a>
-        <a title="Compound List" href="CompoundList.html"
-          ><i
-            class="fa-solid fa-list fa-2xl footicon"
-            style="color: #ffffff"
-          ></i
-        ></a>
-        <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
-      </div>
-    </footer>
+
     <!-- <footer>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     </footer>
