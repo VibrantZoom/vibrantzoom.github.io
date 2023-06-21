@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css-reset.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1c9a9e75f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+    <link rel="icon" href="favicon/favicon.ico" />
+    <title>Chemical Compounds</title>
+  </head>
+
+  <body onload="onLoadIndex()">
+    <div class="container">
+      <nav>
+        <a href="index.html"
+          ><i
+            class="fa-solid fa-house fa-2xl navicon"
+            style="color: #ffffff"
+          ></i
+        ></a>
+        <div class="themedropdown">
+          <p id="change-theme-main-button" class="change-theme-button navicon">
+            Change Theme
+          </p>
+          <div class="dropdownbuttonswrapper">
+            <button
+              onclick="orangeTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Orange</p>
+            </button>
+            <button
+              onclick="redTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Red</p>
+            </button>
+            <button
+              onclick="blackTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Black</p>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="hero">
+          <h1 id="title" class="hiddenL">Some Cool Chemical Compounds!</h1>
+          <a
+            title="Source"
+            href="https://pixabay.com/illustrations/chemistry-adrenaline-2938901/"
+          >
+            <img
+              class="hiddenR"
+              style="border-radius: 10px; float: right; margin-top: 50px"
+              height="300px"
+              src="https://cdn.pixabay.com/photo/2017/11/11/11/30/chemistry-2938901_1280.jpg"
+              alt="Hydroxic Acid Picture"
+            />
+          </a>
+          <p class="subtitle hiddenL">
+            Discover Cool Things About Chemical Compounds!
+          </p>
+          <p id="scrolltoseemore" class="subtitle hiddenL">
+            <i class="fa-solid fa-arrow-down fa-beat-fade"></i> Scroll To See
+            More
+          </p>
+        </div>
+        <h1 class="hiddenL">What Are Chemical Compounds?</h1>
+        <p class="text hiddenL description">
+          Chemical compounds are substances made up of two or more elements,
+          which are chemically bonded together. These bonds can be ionic, where
+          one element loses an electron and the other gains an electron, or
+          covalent, where both elements share electrons. Chemical compounds can
+          be found in everything from organic materials like DNA and proteins to
+          inorganic materials like salts and minerals. In fact, the world is
+          made up of countless types of chemical compounds that play a crucial
+          role in maintaining life and the environment.
+        </p>
+        <p class="hiddenL">
+          Common chemical compounds will be in the compound list page, while
+          more interesting chemical compounds will have their own page.
+        </p>
+        <button class="revealbuttons1 button1 hiddenR" onclick="revealImages()">
+          <p>See More About Chemical Compounds</p>
+        </button>
+        <section class="revealedbuttons hiddenR">
+          <button
+            class="revealbuttons2 imagebutton button1"
+            onclick="window.location='Hydroxic Acid.html'"
+          >
+            Hydroxic Acid
+          </button>
+          <button
+            class="revealbuttons2 imagebutton button1"
+            onclick="window.location='CompoundList.html'"
+          >
+            List of Some Chemical Compounds
+          </button>
+        </section>
+      </main>
+      <footer>
+        <h3 id="footertitle">What's Next?</h3>
+        <div class="options">
+          <a title="Home" href="index.html"
+            ><i
+              class="fa-solid fa-house fa-2xl footicon"
+              style="color: #ffffff; margin-bottom: 50px"
+            ></i
+          ></a>
+          <a title="Compound List" href="CompoundList.html"
+            ><i
+              class="fa-solid fa-list fa-2xl footicon"
+              style="color: #ffffff"
+            ></i
+          ></a>
+          <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

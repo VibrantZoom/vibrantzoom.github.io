@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some Chemical Compounds</title>
+    <link rel="stylesheet" href="css-reset.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="favicon/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1c9a9e75f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body onload="onLoadCompoundList()">
+    <div class="container">
+      <nav>
+        <a href="index.html"
+          ><i
+            class="fa-solid fa-house fa-2xl navicon"
+            style="color: #ffffff"
+          ></i
+        ></a>
+        <div class="themedropdown">
+          <p id="change-theme-main-button" class="change-theme-button navicon">
+            Change Theme
+          </p>
+          <div class="dropdownbuttonswrapper">
+            <button
+              onclick="orangeTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Orange</p>
+            </button>
+            <button
+              onclick="redTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Red</p>
+            </button>
+            <button
+              onclick="blackTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Black</p>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <h1 class="hiddenL"><b>Some Chemical Compounds</b></h1>
+        <p class="subtitle hiddenL">Discover new chemical compounds</p>
+        <img
+          class="compoundimage hiddenR"
+          title="Chemical Compound"
+          src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
+        "
+          alt="Chemicals"
+        />
+        <button onclick="scrollll()" class="scrolll mainbutton hiddenR">
+          <p>See chemical compounds</p>
+          <i
+            class="fa-solid fa-hand-pointer fa-beat-fade fa-2xl"
+            id="click-tutorialscroll"
+            style="color: #ffffff; position: absolute; display: inline"
+          ></i>
+        </button>
+      </div>
+
+      <main>
+        <button onclick="aceticacidclick()" class="invisiblebutton">
+          <h2 class="compoundtitle hiddenL">Acetic Acid</h2>
+          <i
+            class="fa-solid fa-hand-pointer fa-beat-fade fa-2xl"
+            id="click-tutorialtitle"
+            style="color: #ffffff; position: absolute; display: inline"
+          ></i>
+        </button>
+        <div class="compounddescription">
+          <p class="aceticacid-description hiddenL description">
+            Acetic acid is a clear, colorless liquid that has a pungent,
+            vinegar-like odor. It is an organic acid and is commonly used in a
+            variety of industries, including food, pharmaceuticals, and
+            textiles. One of its most notable uses is as the main component in
+            vinegar, a widely-used cooking ingredient. Acetic acid is also an
+            important chemical in industrial applications. It is commonly used
+            in the production of plastics, solvents, and dyes. It is also used
+            as a solvent for many other chemicals, and is an important chemical
+            reagent in laboratory settings. Its versatility and widespread use
+            make it a vital ingredient in many modern-day products. Despite its
+            many uses, acetic acid can be harmful if it is ingested or comes
+            into contact with the skin, eyes, or respiratory system. It is
+            important to handle this chemical with care and to wear protective
+            equipment such as gloves and goggles. Despite the risks associated
+            with acetic acid, it remains an integral component in many of the
+            products we use every day. Its versatility and importance in various
+            industries make it a key player in the chemical industry.
+          </p>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <h3 id="footertitle">What's Next?</h3>
+      <div class="options">
+        <a title="Home" href="index.html"
+          ><i
+            class="fa-solid fa-house fa-2xl footicon"
+            style="color: #ffffff; margin-bottom: 50px"
+          ></i
+        ></a>
+        <a title="Compound List" href="CompoundList.html"
+          ><i
+            class="fa-solid fa-list fa-2xl footicon"
+            style="color: #ffffff"
+          ></i
+        ></a>
+        <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
+      </div>
+    </footer>
+    <!-- <footer>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </footer>
+     -->
+  </body>
+</html>
