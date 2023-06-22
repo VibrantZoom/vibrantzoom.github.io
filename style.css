@@ -442,3 +442,31 @@ footer {
 }
 .box{
   outline: 2px dotted var(--text-color);}
+  .cards{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    height: 650px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .card>*{
+    text-align: center;
+  }
+  .cardtitle{
+    margin-top: 20px;
+  }
+.whoforimg{
+  margin-top: 30px;
+}
+.whoforp{
+  margin-top: 20px;
+  max-width: 40ch;
+}
