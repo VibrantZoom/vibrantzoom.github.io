@@ -39,16 +39,16 @@ html {
   box-sizing: border-box;
 }
 html {
-  background-color: var(--background-color);
+   background-color: var(--background-color);
   /* color-scheme: light dark; */
 }
 body {
-  overflow-x: hidden;
+  background-color: var(--background-color);
+  /* background-image: radial-gradient(circle at 100px 100px, rgba(255, 255, 255, 0.6), transparent 40%); */
+    overflow-x: hidden;
 }
 
 
-
-/* TODO:  LINKS CHANGE COLOR WHEN CLICKED, IMGS, CREATIVE COMMOMS, COOKIES POP-UP! (Does localstorage count as cookies?)*/
 
 
 .hiddenR {

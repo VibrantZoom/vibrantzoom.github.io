@@ -19,6 +19,23 @@ function disableCookies(){
 }
 
 
+// addEventListener("mousemove", (event) => {
+//   const rect = event.target.getBoundingClientRect();
+//   const mouseX = event.clientX - rect.left;
+//   const mouseY = event.clientY - rect.top;
+//   document.documentElement.style.backgroundImage  = `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(255, 255, 255, 0.06), transparent 40%)`;
+//   console.log(mouseX);
+
+// });
+
+// addEventListener("scroll", (event) => {
+//   const rect = event.target.getBoundingClientRect();
+//   const mouseX = event.clientX - rect.left;
+//   const mouseY = event.clientY - rect.top;
+//   document.documentElement.style.backgroundImage  = `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(255, 255, 255, 0.06), transparent 40%)`;
+//   console.log(mouseX);
+
+// });
 
 
 if(localStorageEnabled) {
