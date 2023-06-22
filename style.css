@@ -451,8 +451,8 @@ footer {
   .card{
     background-color: var(--accent-color);
     border-radius: 10px;
-    height: 650px;
-    width: 450px;
+    /* height: 650px; */
+    width: 20vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -464,9 +464,12 @@ footer {
     margin-top: 20px;
   }
 .whoforimg{
+  height: 15vw;
   margin-top: 30px;
 }
 .whoforp{
   margin-top: 20px;
-  max-width: 40ch;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
 }
