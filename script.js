@@ -1,9 +1,9 @@
 let viewcount = 0;
-let cookiesEnabled = true;
+let localStorageEnabled = true;
 function enableCookies(){
   document.getElementById("disclaimerBanner").style.display = "none";
-  cookiesEnabled = true;
-  localStorage.setItem("cookiesEnabled", true);
+  localStorageEnabled = true;
+  localStorage.setItem("localStorageEnabled", true);
   document.getElementById("nav").style.borderRadius = '10px';
   // more customization
 //   navElement.style.borderTopLeftRadius = '10px';
@@ -15,13 +15,13 @@ function disableCookies(){
   document.getElementById("disclaimerBanner").style.display = "none";
   document.getElementById("nav").style.borderRadius = '10px';
 
-  cookiesEnabled = false;
+  localStorageEnabled = false;
 }
 
 
 
 
-if(cookiesEnabled) {
+if(localStorageEnabled) {
   if(localStorage.getItem("theme") == "black"){
     blackTheme();
     }else if(localStorage.getItem("theme") == "orange"){
@@ -89,18 +89,22 @@ for(let i = 0; i < hovertarget.length; i++){
   // var rs = getComputedStyle(r);
 function orangeTheme(){
   // https://realtimecolors.com/?colors=0a060e-ff8000-76aa46-d7c5e7-446228
-  if(cookiesEnabled){
+  if(localStorageEnabled){
     localStorage.setItem("theme", "orange");
   }
 var r = document.querySelector(':root');
 var variableUpdates = {
-  '--background-color': '#ff8000',
   '--text-color': '#0a060e',
+  '--background-color': '#ff8000',
   '--primary-button-color': '#76aa46',
-  '--secondary-button-color': '#d7c5e7',
+  '--secondary-button-color': '#3a7701',
   '--accent-color': '#88e035',
   '--subtitle-color': '#b4ea81',
-  '--nav-color': 'green'
+  '--nav-color': 'green',
+  '--link-active': '#fccd9f',
+  '--link-visited': '#fca955',
+  '--link-hover': '#04f952'
+
 };
 // Update the variables using a loop
 for (var variable in variableUpdates) {
@@ -110,21 +114,24 @@ for (var variable in variableUpdates) {
 // Set body background color to the updated background color variable
 }
 function redTheme(){
-  if(cookiesEnabled){
+  if(localStorageEnabled){
   localStorage.setItem("theme", "red");
   }
   // https://realtimecolors.com/?colors=030302-ff5e5e-96bba7-e1d8d1-745d8e
 var r = document.querySelector(':root');
 var variableUpdates = {
+    '--text-color': '#030302',
   '--background-color': '#ff5e5e',
-  '--text-color': '#030302',
   '--primary-button-color': '#96bba7',
-  '--secondary-button-color': '#122d46',
+  '--secondary-button-color': '#88cca8',
   '--accent-color': '#745d8e',
   '--subtitle-color': 'darkgrey',
   '--nav-color': 'lightcoral',
   '--link-active': '#02f9c0',
-  '--link-visited': 'aqua'
+  '--link-visited': '#512925',
+  '--link-hover': '#f96743'
+
+
 };
 // Update the variables using a loop
 for (var variable in variableUpdates) {
@@ -137,19 +144,22 @@ for (var variable in variableUpdates) {
 
 function blackTheme(){
 //https://realtimecolors.com/?colors=f7fafd-04080c-1b3a55-0c1a27-152d41
-if(cookiesEnabled){
+if(localStorageEnabled){
   localStorage.setItem("theme", "black");
 }
   var r = document.querySelector(':root');
 
   var variableUpdates = {
-    '--background-color': '#04080c',
     '--text-color': '#f7fafd',
+    '--background-color': '#04080c',
     '--primary-button-color': '#1b3a55',
-    '--secondary-button-color': '#0c1a27',
+    '--secondary-button-color': '#122d46',
     '--accent-color': '#152d41',
     '--subtitle-color': 'grey',
-    '--nav-color': '#1c2731'
+    '--nav-color': '#1c2731',
+    '--link-active': '#02f9c0',
+    '--link-visited': 'aqua',
+    '--link-hover': 'grey'
 
   }
 
@@ -245,16 +255,18 @@ mouseanimation.style.display = "none";
   var shown = false;
 
 async function aceticacidclick(){
-
-
-
   clicks++;
  if(clicks == 1){
   var mouseanimation = document.getElementById("click-tutorialtitle");
   mouseanimation.classList.add("fa-bounce");
   mouseanimation.classList.remove("fa-beat-fade");
+  
+  window.scroll({
+    top: 1500,
+    behavior: "smooth",
+  })
 }else if(clicks >= 2){
-  if(cookiesEnabled){
+  if(localStorageEnabled){
   localStorage.setItem("donetutorial", true);
   }
   var mouseanimation = document.getElementById("click-tutorialtitle");
@@ -262,24 +274,25 @@ async function aceticacidclick(){
 }
 var mouseani = document.getElementsByClassName("aceticacid-description");
 
-  let computedStyle = window.getComputedStyle(mouseani[0]);
+  // let computedStyle = window.getComputedStyle(mouseani[0]);
   // computedStyle.display== "inline-block" 
-  if(shown == true) {
-    for(let i = 0; i<mouseani.length; i++){
-    console.log(1123);
-    mouseani[i].style.display = "inline";
-      mouseani[i].animate([
-        // key frames
-        // { transform: "translateY(100px)"},
-        // { transform: "translateY(0px)" }
-        { opacity: "100%"},
-        { opacity: "0%" }
-      ], {
-        // sync options
-        duration: 200,
-        iterations: 1
+  var desc = document.getElementsByClassName("aceticacid-description");
 
-      });   
+  if(window.getComputedStyle(desc[0]).display == "block") {
+    for(let i = 0; i<mouseani.length; i++){
+    mouseani[i].style.display = "inline";
+      // mouseani[i].animate([
+      //   // key frames
+      //   // { transform: "translateY(100px)"},
+      //   // { transform: "translateY(0px)" }
+      //   { opacity: "100%"},
+      //   { opacity: "0%" }
+      // ], {
+      //   // sync options
+      //   duration: 200,
+      //   iterations: 1
+
+      // });   
       // Figure out way to make all go at once
       // await new Promise(resolve => setTimeout(resolve,190));
 
@@ -289,8 +302,6 @@ var mouseani = document.getElementsByClassName("aceticacid-description");
     }
   }else{
     for(let i = 0; i<mouseani.length; i++){
-
-    console.log(1123123);
     mouseani[i].style.display = "inline";
     shown = true;
     }
@@ -302,22 +313,21 @@ var mouseani = document.getElementsByClassName("aceticacid-description");
 async function nitricacidclick(){
 var desc = document.getElementsByClassName("nitricacid-description");
   // computedStyle.display== "inline-block" 
-  if(shown == true) {
+  if(window.getComputedStyle(desc[0]).display == "block") {
     for(let i = 0; i<desc.length; i++){
-    console.log(1123);
-    desc[i].style.display = "inline";
-      desc[i].animate([
-        // key frames
-        // { transform: "translateY(100px)"},
-        // { transform: "translateY(0px)" }
-        { opacity: "100%"},
-        { opacity: "0%" }
-      ], {
-        // sync options
-        duration: 200,
-        iterations: 1
+    desc[i].style.display = "inline-block";
+      // desc[i].animate([
+      //   // key frames
+      //   // { transform: "translateY(100px)"},
+      //   // { transform: "translateY(0px)" }
+      //   { opacity: "100%"},
+      //   { opacity: "0%" }
+      // ], {
+      //   // sync options
+      //   duration: 200,
+      //   iterations: 1
 
-      });   
+      // });   
       // Figure out way to make all go at once
       // await new Promise(resolve => setTimeout(resolve,190));
 
@@ -327,9 +337,7 @@ var desc = document.getElementsByClassName("nitricacid-description");
     }
   }else{
     for(let i = 0; i<desc.length; i++){
-
-    console.log(1123123);
-    desc[i].style.display = "inline";
+    desc[i].style.display = "inline-block";
     shown = true;
     }
   }
@@ -338,22 +346,21 @@ var desc = document.getElementsByClassName("nitricacid-description");
 async function phosphoricacidclick(){
   var desc = document.getElementsByClassName("phosphoricacid-description");
     // computedStyle.display== "inline-block" 
-    if(shown == true) {
+    if(window.getComputedStyle(desc[0]).display == "block"){ 
       for(let i = 0; i<desc.length; i++){
-      console.log(1123);
-      desc[i].style.display = "inline";
-        desc[i].animate([
-          // key frames
-          // { transform: "translateY(100px)"},
-          // { transform: "translateY(0px)" }
-          { opacity: "100%"},
-          { opacity: "0%" }
-        ], {
-          // sync options
-          duration: 200,
-          iterations: 1
+      desc[i].style.display = "inline-block";
+        // desc[i].animate([
+        //   // key frames
+        //   // { transform: "translateY(100px)"},
+        //   // { transform: "translateY(0px)" }
+        //   { opacity: "100%"},
+        //   { opacity: "0%" }
+        // ], {
+        //   // sync options
+        //   duration: 200,
+        //   iterations: 1
   
-        });   
+        // });   
         // Figure out way to make all go at once
         // await new Promise(resolve => setTimeout(resolve,190));
   
@@ -363,16 +370,14 @@ async function phosphoricacidclick(){
       }
     }else{
       for(let i = 0; i<desc.length; i++){
-  
-      console.log(1123123);
-      desc[i].style.display = "inline";
+        desc[i].style.display = "inline-block";
       shown = true;
       }
     }
   
   }
   function seeTutorialAgain(){
-    if(cookiesEnabled){
+    if(localStorageEnabled){
      localStorage.removeItem("donetutorial");
     }
     window.scroll({
@@ -398,4 +403,41 @@ window.location='http://www.armory.com/~crisper/DHMO';
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
+}
+
+// Do later?
+
+// function navcolumn(){
+//   let container = document.querySelectorAll('.container');
+//   let column = document.getElementById('column');
+//   let height = document.body.offsetHeight;
+//   column.style.height = height + "px";
+//   column.style.display = "block";
+//       column.animate([
+//           // key frames
+//           { transform: "translateX(30vw)"},
+//           { transform: "translateX(0px)" }
+
+//         ], {
+//           // sync options
+//           duration: 200,
+//           iterations: 1
+  
+//         });   
+// }
+
+
+function scrollToElement(elementId) {
+  console.log(elementId);
+  var element = document.getElementById(elementId);
+  if (element) {
+    var elementRect = element.getBoundingClientRect();
+    var absoluteElementTop = elementRect.top + window.pageYOffset;
+    var middleOfViewport = window.innerHeight / 2;
+    var scrollToPosition = absoluteElementTop - middleOfViewport;
+    window.scrollTo({
+      top: scrollToPosition,
+      behavior: 'smooth'
+    });
+  }
 }

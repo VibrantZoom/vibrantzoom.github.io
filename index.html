@@ -24,6 +24,7 @@
 
   <body onload="onLoadIndex()">
     <div class="container">
+
       <nav id="nav">
         <a class="naviconlink" title="Home" href="index.html">
 
@@ -103,7 +104,7 @@
           </div>
         </div> -->
       </nav>
-      <div id="disclaimerBanner" class="banner"><p>Disclaimer banner: This site uses cookies. If you disable them, your themes will not be saved!</p> <button id="enableCookiesButton" onclick="enableCookies()">Accept</button> <button onclick="disableCookies()">Deny</button> </div>
+      <div id="disclaimerBanner" class="banner"><p>Disclaimer banner: This site uses local storage. You can see the data stored by right clicking the site > inspect > application tab > local storage > drop down menu > this site. If you disable them, your themes will not be saved!</p> <button id="enableCookiesButton" onclick="enableCookies()">Accept</button> <button onclick="disableCookies()">Deny</button> </div>
       <main>
         <div class="hero">
           <h1 id="title" class="hiddenL">Some Cool Chemical Compounds!</h1>
@@ -174,12 +175,18 @@
             ></i
           ></a>
           <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
+        
+          <!-- <button onclick="navcolumn()" class="invisiblebutton" title="Lost"
+          > <i class="fa-solid fa-person-circle-question fa-2xl footicon" style="color: #ffffff;"></i></button> -->
+        
+        
+      
         </div>
       </footer>
     </div>
   </body>
 </html>
-<script defer>if(localStorage.getItem("cookiesEnabled")){
+<script defer>if(localStorage.getItem("localStorageEnabled")){
   
   document.getElementById("disclaimerBanner").style.display = "none";
   document.getElementById("nav").style.borderRadius = '10px';
