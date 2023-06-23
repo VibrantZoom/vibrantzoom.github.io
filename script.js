@@ -390,7 +390,7 @@ function startTrivia(){
 if(qnum >= amntofqs){
   answersHtml.innerText = "gud job. try again for a better score. questions are randomly picked from a pool of 21.";
   answersHtml.style.color = "white";
-  questionHtml.innerText = "You got " + (wrong) + " questions wrong and "+ (right) +" questions right! Score: " + ((right/questions.length)*100) + "%";
+  questionHtml.innerText = "You got " + (wrong) + " questions wrong and "+ (right) +" questions right! Score: " + ((right/amntofqs)*100) + "%";
 imageHtml.src = "https://images.unsplash.com/photo-1580893211123-627e0262be3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
 homebtn.style.display = "block";
 playagainbtn.style.display = "block";
