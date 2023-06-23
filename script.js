@@ -395,6 +395,8 @@ imageHtml.src = "https://images.unsplash.com/photo-1580893211123-627e0262be3a?ix
 homebtn.style.display = "block";
 playagainbtn.style.display = "block";
 goToNextQuestionBtn.style.display = "none";
+wrong = 0;
+right = 0;
 return;
 }
   answersHtml.innerText = "";
