@@ -46,7 +46,7 @@ html {
   /* color-scheme: light dark; */
 }
 body {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   /* background-image: radial-gradient(circle at 100px 100px, rgba(255, 255, 255, 0.6), transparent 40%); */
     overflow-x: hidden;
 }
