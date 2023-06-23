@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css-reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1c9a9e75f2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="script.js"></script>
+    <link rel="icon" href="favicon/favicon.ico" />
+    <title>Trivia</title>
+  </head>
+
+  <body">     
+    <div class="container">
+
+        <nav id="nav">
+            <a class="naviconlink" title="Home" href="index.html">
+    
+            <div class="naviconwrapper">
+              <i
+                class="fa-solid fa-house fa-2xl navicon"
+                style="color: #ffffff"
+              ></i>
+            <p id="naviconlabel" class="navicon naviconlabel">Home</p>
+          </div>
+          </a>
+    
+          <a class="naviconlink" title="FAQ" href="FAQ.html">
+    
+            <div class="naviconwrapper">
+              <i
+                class="fa-solid fa-question fa-2xl navicon"
+                style="color: #ffffff"
+              ></i>
+            <p id="naviconlabel" class="navicon naviconlabel">FAQ</p>
+          </div>
+          </a>
+    
+          <a class="naviconlink" title="Games" href="games.html">
+    
+            <div class="naviconwrapper">
+              <i class="fa-solid fa-gamepad fa-2xl navicon" style="color: #ffffff;"></i>
+            <p id="naviconlabel" class="navicon naviconlabel">Games</p>
+          </div>
+          </a>
+    
+          <!-- <a class="naviconlink" title="FAQ" href="FAQ.html"> -->
+    
+            <div class="themedropdown">
+            <div class="naviconwrapper themedropdownwrapper">
+                <i id="change-theme-main-button" class="fa-solid fa-paintbrush fa-2xl navicon change-theme-button" style="color: #ffffff;"></i>
+    
+            <p id="naviconlabel" class="navicon naviconlabel changethemelabel">Change Theme</p>
+            <div class="dropdownbuttonswrapper">
+                <button
+                  onclick="orangeTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Orange</p>
+                </button>
+                <button
+                  onclick="redTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Red</p>
+                </button>
+                <button
+                  onclick="blackTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Black</p>
+                </button>
+              </div>
+        </div>
+          </div>
+          <!-- </a> -->
+    
+            <!-- <div class="themedropdown">
+              <p id="change-theme-main-button" class="change-theme-button navicon">
+                Change Theme
+              </p>
+              <div class="dropdownbuttonswrapper">
+                <button
+                  onclick="orangeTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Orange</p>
+                </button>
+                <button
+                  onclick="redTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Red</p>
+                </button>
+                <button
+                  onclick="blackTheme()"
+                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+                >
+                  <p>Black</p>
+                </button>
+              </div>
+            </div> -->
+          </nav>
+      <div id="disclaimerBanner" class="banner"><p>Disclaimer banner: This site uses local storage. You can see the data stored by right clicking the site > inspect > application tab > local storage > drop down menu > this site (Chrome). If you disable them, your themes will not be saved! Local storage is enabled by default if you ignore this message.</p> <button id="enableCookiesButton" onclick="enableCookies()">Accept</button> <button onclick="disableCookies()">Deny</button> </div>
+      <main>
+        <div class="hero">
+          <h1 id="title" class="hiddenL">Trivia</h1>
+            <img
+              class="hiddenR"
+              style="float: right; margin-top: 50px"
+              height="300px"
+              src="images/undraw_decide_re_ixfw.svg"
+              alt="Person deciding"
+            />
+          <!-- <p class="subtitle hiddenL">
+            Discover Cool Things About Chemical Compounds!
+          </p> -->
+          <p id="scrolltoseemore" class="subtitle hiddenL">
+            <i class="fa-solid fa-arrow-down fa-beat-fade"></i> Scroll To See
+            More
+          </p>
+        </div>
+        <h1 class="hiddenL">Catagory</h1>
+        <div class="cards gamecards hiddenR">
+            <a href="generalknowledge.html">
+
+            <div class="card singletoncard">
+              <h2 class="cardtitle">General Knowledge</h2>
+                <div style="margin: 100px 0px" class="wcircle100px">
+
+                </div>
+
+            </div>
+    </a>   
+          </div>
+
+      </main>
+      <footer>
+        <h3 id="footertitle">What's Next?</h3>
+        <div class="options">
+          <a title="Home" href="index.html"
+            ><i
+              class="fa-solid fa-house fa-2xl footicon"
+              style="color: #ffffff; margin-bottom: 50px"
+            ></i
+          ></a>
+
+
+
+          <a title="FAQ" href="FAQ.html">
+<i class="fa-solid fa-question fa-2xl footicon" style="color: #ffffff"></i>
+          </a>
+          <a title="Compound List" href="CompoundList.html"
+            ><i
+              class="fa-solid fa-list fa-2xl footicon"
+              style="color: #ffffff"
+            ></i
+          ></a>
+          <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
+          <a title="Hydroxic Acid" href="Hydroxic Acid.html"><i class="fa-sharp fa-solid fa-2xl fa-droplet footicon" style="color: #ffffff;"></i></a>
+          <a title="Games" href="games.html"><i class="fa-sharp fa-solid fa-2xl fa-gamepad footicon" style="color: #ffffff;"></i></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+</script>

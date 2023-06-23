@@ -15,85 +15,95 @@
 </head>
 <body>
     <div class="container">
-        <nav id="nav">
-            <a class="naviconlink" title="Home" href="index.html">
-    
-            <div class="naviconwrapper">
-              <i
-                class="fa-solid fa-house fa-2xl navicon"
-                style="color: #ffffff"
-              ></i>
-            <p id="naviconlabel" class="navicon naviconlabel">Home</p>
+      <nav id="nav">
+        <a class="naviconlink" title="Home" href="index.html">
+
+        <div class="naviconwrapper">
+          <i
+            class="fa-solid fa-house fa-2xl navicon"
+            style="color: #ffffff"
+          ></i>
+        <p id="naviconlabel" class="navicon naviconlabel">Home</p>
+      </div>
+      </a>
+
+      <a class="naviconlink" title="FAQ" href="FAQ.html">
+
+        <div class="naviconwrapper">
+          <i
+            class="fa-solid fa-question fa-2xl navicon"
+            style="color: #ffffff"
+          ></i>
+        <p id="naviconlabel" class="navicon naviconlabel">FAQ</p>
+      </div>
+      </a>
+
+      <a class="naviconlink" title="Games" href="games.html">
+
+        <div class="naviconwrapper">
+          <i class="fa-solid fa-gamepad fa-2xl navicon" style="color: #ffffff;"></i>
+        <p id="naviconlabel" class="navicon naviconlabel">Games</p>
+      </div>
+      </a>
+
+      <!-- <a class="naviconlink" title="FAQ" href="FAQ.html"> -->
+
+        <div class="themedropdown">
+        <div class="naviconwrapper themedropdownwrapper">
+            <i id="change-theme-main-button" class="fa-solid fa-paintbrush fa-2xl navicon change-theme-button" style="color: #ffffff;"></i>
+
+        <p id="naviconlabel" class="navicon naviconlabel changethemelabel">Change Theme</p>
+        <div class="dropdownbuttonswrapper">
+            <button
+              onclick="orangeTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Orange</p>
+            </button>
+            <button
+              onclick="redTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Red</p>
+            </button>
+            <button
+              onclick="blackTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Black</p>
+            </button>
           </div>
-          </a>
-    
-          <a class="naviconlink" title="FAQ" href="FAQ.html">
-    
-            <div class="naviconwrapper">
-              <i
-                class="fa-solid fa-question fa-2xl navicon"
-                style="color: #ffffff"
-              ></i>
-            <p id="naviconlabel" class="navicon naviconlabel">FAQ</p>
+    </div>
+      </div>
+      <!-- </a> -->
+
+        <!-- <div class="themedropdown">
+          <p id="change-theme-main-button" class="change-theme-button navicon">
+            Change Theme
+          </p>
+          <div class="dropdownbuttonswrapper">
+            <button
+              onclick="orangeTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Orange</p>
+            </button>
+            <button
+              onclick="redTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Red</p>
+            </button>
+            <button
+              onclick="blackTheme()"
+              class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
+            >
+              <p>Black</p>
+            </button>
           </div>
-          </a>
-          <!-- <a class="naviconlink" title="FAQ" href="FAQ.html"> -->
-    
-            <div class="themedropdown">
-            <div class="naviconwrapper themedropdownwrapper">
-                <i id="change-theme-main-button" class="fa-solid fa-paintbrush fa-2xl navicon change-theme-button" style="color: #ffffff;"></i>
-    
-            <p id="naviconlabel" class="navicon naviconlabel changethemelabel">Change Theme</p>
-            <div class="dropdownbuttonswrapper">
-                <button
-                  onclick="orangeTheme()"
-                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
-                >
-                  <p>Orange</p>
-                </button>
-                <button
-                  onclick="redTheme()"
-                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
-                >
-                  <p>Red</p>
-                </button>
-                <button
-                  onclick="blackTheme()"
-                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
-                >
-                  <p>Black</p>
-                </button>
-              </div>
-        </div>
-          </div>
-          <!-- </a> -->
-    
-            <!-- <div class="themedropdown">
-              <p id="change-theme-main-button" class="change-theme-button navicon">
-                Change Theme
-              </p>
-              <div class="dropdownbuttonswrapper">
-                <button
-                  onclick="orangeTheme()"
-                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
-                >
-                  <p>Orange</p>
-                </button>
-                <button
-                  onclick="redTheme()"
-                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
-                >
-                  <p>Red</p>
-                </button>
-                <button
-                  onclick="blackTheme()"
-                  class="change-theme-button navicon dropdownicon change-theme-dropdown-icon"
-                >
-                  <p>Black</p>
-                </button>
-              </div>
-            </div> -->
-          </nav>
+        </div> -->
+      </nav>
+          <div id="disclaimerBanner" class="banner"><p>Disclaimer banner: This site uses local storage. You can see the data stored by right clicking the site > inspect > application tab > local storage > drop down menu > this site (Chrome). If you disable them, your themes will not be saved! Local storage is enabled by default if you ignore this message.</p> <button id="enableCookiesButton" onclick="enableCookies()">Accept</button> <button onclick="disableCookies()">Deny</button> </div>
 <main>
 
 
@@ -165,7 +175,7 @@
     ></a>
     <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
     <a title="Hydroxic Acid" href="Hydroxic Acid.html"><i class="fa-sharp fa-solid fa-2xl fa-droplet footicon" style="color: #ffffff;"></i></a>
-    
+    <a title="Games" href="games.html"><i class="fa-sharp fa-solid fa-2xl fa-gamepad footicon" style="color: #ffffff;"></i></a>
   </div>
 </footer>
     </div>

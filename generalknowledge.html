@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css-reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Work+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1c9a9e75f2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="script.js"></script>
+    <link rel="icon" href="favicon/favicon.ico" />
+    <title>General Knowledge Quiz</title>
+  </head>
+  <body onload="startTrivia()">     
+    <a title="Home" href="index.html">
+                  <i
+            class="fa-solid fa-house fa-2xl exitgame"
+            style="color: #ffffff"
+          ></i>
+
+      </a>
+    <div class="container">
+      <main class="gameboard">
+        <div class="cards gknowledgecards hiddenR">
+            <div class="card singletoncard gameplaycard">
+                <h4 id="qremaining" class="qremaining">Questions remaining: 0</h4>
+              <h2 class="cardtitle">General Knowledge</h2>
+                <h3 id="triviaquestion" class="triviaquestion">dfgdfgfd?</h3>
+                <h3 id="answekey"></h3>
+                <img id="qimage" class="qimage" src="images/undraw_decide_re_ixfw.svg" alt="">
+                    <div id="multichoicebtns" class="multichoicebtns">
+<button onclick="nextQuestion(this)" id="option1" class="button1 optionbtn">asd</button>
+<button onclick="nextQuestion(this)" id="option2" class="button1 optionbtn">asdf</button>
+<button onclick="nextQuestion(this)" id="option3" class="button1 optionbtn">asdfasf</button>
+<button onclick="nextQuestion(this)" id="option4" class="button1 optionbtn">dfgjiodpsgfi</button>
+<button id="go-to-next-question" style="display: none;" class="button1" onclick="goToNextQuestion()">Go to next question</button>
+<button style="display: none;" onclick="window.open('index.html', '_self')" id="gohome">Go Home</button>                    
+<button style="display: none;" id="playagain" onclick="location.reload()">Play Again</button>
+</div>
+            </div>
+          </div>
+        
+ 
+      </main>
+    </div>
+  </body>
+</html>
+</script>

@@ -22,7 +22,7 @@
     <title>Chemical Compounds</title>
   </head>
 
-  <body onload="onLoadIndex()">     
+  <body">     
     <div class="container">
 
       <nav id="nav">
@@ -47,6 +47,15 @@
         <p id="naviconlabel" class="navicon naviconlabel">FAQ</p>
       </div>
       </a>
+
+      <a class="naviconlink" title="Games" href="games.html">
+
+        <div class="naviconwrapper">
+          <i class="fa-solid fa-gamepad fa-2xl navicon" style="color: #ffffff;"></i>
+        <p id="naviconlabel" class="navicon naviconlabel">Games</p>
+      </div>
+      </a>
+
       <!-- <a class="naviconlink" title="FAQ" href="FAQ.html"> -->
 
         <div class="themedropdown">
@@ -128,34 +137,56 @@
         <div class="cards hiddenR">
           <div class="card">
             <h2 class="cardtitle">Animals</h2>
-            <img class="whoforimg"src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80" alt="Cat">
-          <p class="whoforp">Animals are the original chemists; after all, it takes serious bio-chemical skills to turn a can of trash into a gourmet meal, just ask a raccoon.</p>
+            <img class="cardimg"src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=715&q=80" alt="Cat">
+          <p class="cardp">Animals are the original chemists; after all, it takes serious bio-chemical skills to turn a can of trash into a gourmet meal, just ask a raccoon.</p>
           </div>
           <div class="card">
             <h2 class="cardtitle">Humans</h2>
-            <img class="whoforimg" src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" alt="Person looking into the distance">
-            <p class="whoforp">Humans use chemistry to accomplish monumental feats, like landing on the moon, and equally important ones, like figuring out how many hot sauce drops will set their tacos on fire but not their mouths.</p>
+            <img class="cardimg" src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" alt="Person looking into the distance">
+            <p class="cardp">Humans use chemistry to accomplish monumental feats, like landing on the moon, and equally important ones, like figuring out how many hot sauce drops will set their tacos on fire but not their mouths.</p>
           </div>
           <div class="card">
             <h2 class="cardtitle">Aliens</h2>
-            <img class="whoforimg" src="https://images.unsplash.com/photo-1585261941984-0145bb423997?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Groot fugure">
-            <p class="whoforp">Aliens might be using chemistry to master the perfect Martian margarita or create a universal translation spray that even understands toddler babble.</p>
+            <img class="cardimg" src="https://images.unsplash.com/photo-1585261941984-0145bb423997?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Groot fugure">
+            <p class="cardp">Aliens might be using chemistry to master the perfect Martian margarita or create a universal translation spray that even understands toddler babble.</p>
           </div>
 
         </div>
 
         <h1 class="hiddenL">What Are Chemical Compounds?</h1>
         <p class="text hiddenL description">
-          Chemical compounds are substances made up of two or more elements,
+          Chemical compounds are substances that are made up of atoms from more than 1 chemical element. Chemical compounds are held together by chemical bonds. Here are the 4 main types of chemical compounds:
+
+
+
+
+
+
+          <!-- GPT -->
+
+          <!-- Chemical compounds are substances made up of two or more elements,
           which are chemically bonded together. These bonds can be ionic, where
           one element loses an electron and the other gains an electron, or
           covalent, where both elements share electrons. Chemical compounds can
           be found in everything from organic materials like DNA and proteins to
           inorganic materials like salts and minerals. In fact, the world is
           made up of countless types of chemical compounds that play a crucial
-          role in maintaining life and the environment.
+          role in maintaining life and the environment. -->
         </p>
-        <p class="hiddenL">
+        
+        <dl class="hiddenL typesofcompounds">
+          <dt><b>Molecular compounds</b></dt>
+          <dd>Held together via covalent bonds. (Atoms share electrons)</dd>
+          <dt><b>Ionic compounds</b></dt>
+          <dd>Held together via ionic bonds. (Nonmetals take electrons from metals)</dd>
+          <dt><b>Intermetallic compounds</b></dt>
+          <dd>Held together via metallic bonds</dd>
+          <dt><b>Coordination complexes</b></dt>
+          <dd>Held together by coordinate covalent bonds, has a central aton/ion which is usually metallic.</dd>
+      </dl>
+      <p class="hiddenL mt2r">Chemical compounds can be refered to by their chemical formula. This uses symbols and subscripts to indicate the type and number of atoms involved.</p>
+
+        <p class="hiddenL description mt30">
           Common chemical compounds will be in the compound list page, while
           more interesting chemical compounds will have their own page.
         </p>
@@ -199,16 +230,9 @@
           ></a>
           <!-- <a title="" href=""></a>  <i class="fa-solid fa-exclamation fa-2xl" style="color: #ffffff;"></i> -->
           <a title="Hydroxic Acid" href="Hydroxic Acid.html"><i class="fa-sharp fa-solid fa-2xl fa-droplet footicon" style="color: #ffffff;"></i></a>
-          
+          <a title="Games" href="games.html"><i class="fa-sharp fa-solid fa-2xl fa-gamepad footicon" style="color: #ffffff;"></i></a>
         </div>
       </footer>
     </div>
   </body>
 </html>
-<script defer>if(localStorage.getItem("localStorageEnabled")){
-  
-  document.getElementById("disclaimerBanner").style.display = "none";
-  document.getElementById("nav").style.borderRadius = '10px';
-
-}
-</script>

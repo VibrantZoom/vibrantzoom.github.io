@@ -31,12 +31,15 @@ html {
   scrollbar-color: transparent transparent; /* Set transparent colors for the scrollbar track and thumb */
 }
 
-* {
+*:not(dd) {
   /* text-wrap: balance; */
   transition-duration: 0.1s;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+dd{
+  margin-left: 2rem;
 }
 html {
    background-color: var(--background-color);
@@ -194,6 +197,8 @@ footer {
 img{
   border-radius: 10px;
 }
+dd,
+dt,
 a,
 li,
 p,
@@ -205,10 +210,16 @@ h4 {
   color: var(--text-color);
   font-family: "Work Sans", sans-serif;
 }
-li, p:not(.subtitle) {
+dd, dt, li, p:not(.subtitle) {
   line-height: 1.5rem;
   font-size: 1rem;
   font-family: "Merriweather", serif;
+}
+dd{
+  list-style-type: disc;
+}
+dt{
+  list-style-type: disc;
 }
 .subtitle {
   color: var(--subtitle-color);
@@ -440,6 +451,39 @@ footer {
     transition: transform 1s;
   }
 }
+.mt30{
+margin-top: 30px;
+}
+.mt20{
+  margin-top: 20px;
+  }
+.mt2r{
+    margin-top: 2rem;
+    }
+ .mt15r{
+      margin-top: 1.5rem;
+      }
+      .mt1r{
+        margin-top: 1rem;
+      }
+.mt05r{
+  margin-top: 0.5rem;
+}
+.typesofcompounds dd{
+  line-height: 2rem;
+}
+/* .typesofcompounds dt{
+  line-height: 1rem;
+} */
+
+
+em{
+  font-style: italic;
+}
+b{
+  font-weight: bold;
+}
+
 .box{
   outline: 2px dotted var(--text-color);}
   .cards{
@@ -456,6 +500,10 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  .gamecards .card:hover{
+    box-shadow: 3px 3px 10px var(--text-color);
   }
   .card>*{
     text-align: center;
@@ -463,13 +511,79 @@ footer {
   .cardtitle{
     margin-top: 20px;
   }
-.whoforimg{
+.cardimg{
   height: 15vw;
   margin-top: 30px;
 }
-.whoforp{
+.gamecards .card{
+  padding-bottom: 40px;
+}
+.gamecards > *{
+  text-decoration: none;
+  }
+.gamecards .card h2{
+text-decoration: none;
+}
+.cardp{
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 30px;
+}
+.wcircle100px{
+  width: 100px;
+  height: 100px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
+.gknowledgecards{
+  
+}
+.multichoicebtns{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50vw;
+  margin-top: auto;
+  min-width: 500px;
+  margin-bottom: 20px;
+}
+.multichoicebtns button{
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+.gameboard{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.singletoncard{
+  min-width: 300px;
+}
+.gameplaycard{
+  height: 90vh;
+  width: 60vw;
+}
+.triviaquestion{
+  margin-top: 5%;
+}
+.qremaining{
+margin-right: auto;
+padding-top: 20px;
+padding-left: 20px;
+}
+.qimage{
+  margin: auto auto;
+  max-width: 60vw;
+  max-height: 20vw;
+}
+.exitgame{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+#answekey{
+  transition: all 0s;
 }
